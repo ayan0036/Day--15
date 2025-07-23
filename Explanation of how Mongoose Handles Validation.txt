@@ -1,0 +1,5 @@
+Explanation How Mongoose Handles Validation: 
+
+Mongoose automatically validates data before saving a document to the database. When we define a schema, we can add validation rules like required, minlength, or unique. Before the document is saved, Mongoose runs these validations and throws an error if any rule is violated. 
+
+The .validate() method is used internally before .save() to check if the input follows schema rules. If validation fails, Mongoose sends a meaningful error which can be caught using a try-catch block in our route.
